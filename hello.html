@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Text Color</title>
+</head>
+<body>
+    <!-- This is where our JS script will append the button and text elements -->
+    <script>
+        // Function to change the color of the text
+        function changeColor() {
+            // Check the current color and change it
+            textElement.style.color = textElement.style.color === 'blue' ? 'red' : 'blue';
+        }
+
+        // Create a new button element
+        var buttonElement = document.createElement('button');
+        buttonElement.innerHTML = 'Change Color';
+
+        // Add an event listener to the button for the 'click' event
+        buttonElement.addEventListener('click', changeColor);
+
+        // Create a new text element
+        var textElement = document.createElement('h1');
+        textElement.innerHTML = 'Hello, World!';
+        textElement.style.color = 'blue'; // Initial color
+
+        // Append the button and text elements to the body of the page
+        document.body.appendChild(buttonElement);
+        document.body.appendChild(textElement);
+    </script>
+</body>
+</html>
